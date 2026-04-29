@@ -1,4 +1,4 @@
-function gameDropDown({ games, selectedGame, onSelect }) {
+function GameDropDown({ games, selectedGame, onSelect }) {
     function handleChange(e) {
         const game = games.find((game) => game.id === e.target.value)
         onSelect(game || null)
@@ -12,14 +12,14 @@ function gameDropDown({ games, selectedGame, onSelect }) {
                 onChange={handleChange}
             >
                 <option value = "" disabled>Choose a game</option>
-                {games.map((game) => {
+                {games.map((game) => (
                     <option key={game.id} value={game.id}>
                         {game.name}
                     </option>
-                })}
+                ))}
             </select>
         </div>
     )
 }
 
-export default gameDropDown
+export default GameDropDown

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import gameDropDown from './components/gameDropDown'
+import GameDropDown from './components/GameDropDown'
 
 function App() {
   const [games, setGames] = useState([]);
@@ -10,12 +10,8 @@ function App() {
 
   useEffect(() => {
     async function init() {
-      const gameList = await window.ns-presence.getGames();
+      const gameList = await window.nsPresence.getGames();
       setGames(gameList);
-
-      const savedState = await window.ns-presence.getSavedState();
-      if (savedState.lastGame) setSelectedGame(savedState.lastGame);
-      if (savedState.lastStatus) setStatusMessage(savedState.lastStatus);
     }
     init()
   }, []);
@@ -26,7 +22,7 @@ function App() {
       return;
     }
 
-    const result = await window.ns-presence.setActivity({
+    const result = await window.nsPresence.setActivity({
       game: selectedGame,
       statusMessage
     })
@@ -40,7 +36,7 @@ function App() {
   }
 
   async function handleIdle() {
-    const result = await window.ns-presence.setIdle()
+    const result = await window.nsPresence.setIdle()
     if (result.success) {
       setRpcStatus("away");
       setInfo("Showing home menu on idle status.");
@@ -50,8 +46,8 @@ function App() {
   }
 
   async function handleClear() {
-    const result = await window.ns-presence.clearActivity();
-    if (result.sucess) {
+    const result = await window.nsPresence.clearActivity();
+    if (result.success) {
       setRpcStatus("idle");
       setInfo("Status cleared");
     } else {
@@ -61,9 +57,9 @@ function App() {
 
   return (
     <div>
-      <h1>NS-Presence</h1>
+      <h1>nsPresence</h1>
 
-      <gameDropDown 
+      <GameDropDown 
         games = {games}
         selectedGame = {selectedGame}
         onSelect = {setSelectedGame}
@@ -80,7 +76,7 @@ function App() {
       </div>
 
       <div>
-        <button onClick={handlePlay} disabled={rpcStatus === "playing"}>
+        <button onClick={handlePlay}>
           Play
         </button>
         <button onClick={handleIdle} disabled={rpcStatus === "away"}>

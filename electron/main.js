@@ -1,16 +1,13 @@
 const {app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const RPC = require("discord-rpc");
-const Store = require("electron-store");
 const gamesData = require("../data/games.json");
 const { error } = require("console");
-
-const store = new Store();
 
 let rpc = null;
 let rpcReady = false;
 
-const CLIENT_ID = "";
+const CLIENT_ID = process.env.VITE_DISCORD_CLIENT_ID;
 
 async function connectRPC() {
     rpc = new RPC.Client({ transport: "ipc"});
@@ -24,6 +21,12 @@ async function connectRPC() {
         console.log("Discord RPC disconnected");
         rpcReady = false;
     });
+
+    try {
+        await rpc.login({ clientId: CLIENT_ID });
+    } catch (err) {
+        console.log("RPC login failed:", err.message);
+    }
 }
 
 function createWindow() {
@@ -58,7 +61,7 @@ app.on("window-all-closed", () => {
     app.quit();
 });
 
-ipcMain.handle("get-all-games", () => {
+ipcMain.handle("get-games", () => {
     return gamesData;
 });
 
@@ -78,10 +81,6 @@ ipcMain.handle("set-activity", async (event, {game, statusMessage }) => {
             startTimestamp: Date.now(),
             instance: false,
         });
-
-        // Store last used game for re-launch
-        store.set("lastGame", game);
-        store.set("lastGame", statusMessage);
         return { success: true }
     } catch (err) {
         return { success: false, error: err.message }
@@ -116,12 +115,5 @@ ipcMain.handle("clear-activity", async () => {
         return { success: true }
     } catch (err) {
         return { success: false, error: err.message }
-    }
-});
-
-ipcMain.handle("get-saved-state", () => {
-    return {
-        lastGame: store.get("lastGame", null),
-        lastStatus: store.get("lastStatus", "")
     }
 });
