@@ -175,7 +175,7 @@ function App() {
             onMouseEnter={e => e.target.style.background = 'var(--red-dark)'}
             onMouseLeave={e => e.target.style.background = 'var(--red)'}
           >
-            ▶ Play
+            Play
           </button>
           <button onClick={handleIdle} style={{
             flex: 1,
@@ -194,7 +194,7 @@ function App() {
             onMouseEnter={e => e.target.style.background = 'var(--yellow-dark)'}
             onMouseLeave={e => e.target.style.background = 'var(--yellow)'}
           >
-            🏠 Idle
+            Idle
           </button>
           <button onClick={handleClear} style={{
             background: 'var(--surface-2)',
