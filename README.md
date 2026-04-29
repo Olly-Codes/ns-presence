@@ -1,16 +1,29 @@
-# React + Vite
+# NS Presence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Nintendo Switch Discord Rich Presence app built with React and Electron.
+You can set your Discord status to show what you are currently playing on your Switch.
 
-Currently, two official plugins are available:
+<img width="480" height="737" alt="screenshot" src="https://github.com/user-attachments/assets/c192cf9e-0c8d-4ef2-a9ee-7ba41e5c69e3" />
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
+- You can set your Discord Status to any game that is available from the drop down (more games coming!)
+- You can set a custom message per game
+- You can set your status to idle to show you are on the Switch Home menu
+- Status clears automatically when the app is closed
+- Nintendo Switch inspired UI
 
-## React Compiler
+## Requirements
+- Windows 10 or higher
+- You should have your discord app running if you want to see your presence working
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Development
 
-## Expanding the ESLint configuration
+### Prerequisites
+- Node.js 18 or higher
+- npm 9 or higher
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built With
+- [Electron](https://www.electronjs.org/)
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [discord-rpc](https://www.npmjs.com/package/discord-rpc)
