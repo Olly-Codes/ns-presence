@@ -20,6 +20,25 @@ function App() {
     init()
   }, []);
 
+  async function handlePlay() {
+    if (!selectedGame) {
+      setInfo("Please select a game first!");
+      return;
+    }
+
+    const result = await window.ns-presence.setActivity({
+      game: selectedGame,
+      statusMessage
+    })
+
+    if (result.success) {
+      setRpcStatus("playing");
+      setInfo(`Now Showing: ${selectedGame.name}`);
+    } else {
+      setInfo(`Error: ${result.error}`);
+    }
+  }
+
   return (
     <div>
       <h1>NS-Presence</h1>
