@@ -60,3 +60,29 @@ app.on("window-all-closed", () => {
 ipcMain.handle("get-all-games", () => {
     return gamesData;
 });
+
+ipcMain.handle("set-activity", async (event, {game, statusMessage }) => {
+    if (!rpcReady || !rpc) {
+        return { success: false, error: "RPC is not connected"}
+    }
+
+    try {
+        await rpc.setActivity({
+            details: game.name,
+            state: statusMessage || "Playing on Nintendo Switch",
+            largeImageKey: game.imageKey,
+            largeImageText: game.name,
+            smallImageKey: "switch-icon",
+            smallImageText: "Nintendo Switch",
+            startTimestamp: Date.now(),
+            instance: false,
+        });
+
+        // Store last used game for re-launch
+        store.set("lastGame", game);
+        store.set("lastGame", statusMessage);
+        return { success: true }
+    } catch (err) {
+        return { success: false, error: err.message }
+    }
+});
