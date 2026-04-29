@@ -1,4 +1,3 @@
-require('dotenv').config({ path: require('path').join(__dirname, '../.env') })
 const {app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const RPC = require("discord-rpc");
@@ -8,7 +7,7 @@ const { error } = require("console");
 let rpc = null;
 let rpcReady = false;
 
-const CLIENT_ID = process.env.DISCORD_CLIENT_ID;
+const CLIENT_ID = 1498840327274893425;
 
 async function connectRPC() {
     rpc = new RPC.Client({ transport: "ipc"});
