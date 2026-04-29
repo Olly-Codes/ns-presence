@@ -29,6 +29,38 @@ function App() {
         selectedGame = {selectedGame}
         onSelect = {setSelectedGame}
       />
+
+      <div>
+        <label>Custom Status Message</label>
+        <input 
+          type="text"
+          value={statusMessage}
+          onChange={(e) => setStatusMessage(e.target.value)}
+          placeholder="Achievement Hunting!"
+          />
+      </div>
+
+      <div>
+        <button onClick={handlePlay} disabled={rpcStatus === "playing"}>
+          Play
+        </button>
+        <button onClick={handleIdle} disabled={rpcStatus === "away"}>
+          Idle
+        </button>
+        <button onClick={handleClear}>
+          Clear
+        </button>
+      </div>
+
+      {info && (
+        <p style={{color: rpcStatus === "playing" ? "green" : "grey"}}>
+          {info}
+        </p>
+      )}
+
+      <p>
+        RPC State: {rpcStatus}
+      </p>
     </div>
   )
 }
