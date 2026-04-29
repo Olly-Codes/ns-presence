@@ -49,6 +49,16 @@ function App() {
     }
   }
 
+  async function handleClear() {
+    const result = await window.ns-presence.clearActivity();
+    if (result.sucess) {
+      setRpcStatus("idle");
+      setInfo("Status cleared");
+    } else {
+      setInfo(`Error: ${result.error}`);
+    }
+  }
+
   return (
     <div>
       <h1>NS-Presence</h1>
