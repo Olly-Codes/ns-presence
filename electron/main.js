@@ -118,3 +118,10 @@ ipcMain.handle("clear-activity", async () => {
         return { success: false, error: err.message }
     }
 });
+
+ipcMain.handle("get-saved-state", () => {
+    return {
+        lastGame: store.get("lastGame", null),
+        lastStatus: store.get("lastStatus", "")
+    }
+});
