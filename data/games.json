@@ -1,0 +1,22 @@
+[
+    {
+        "id": "botw",
+        "name": "The Legend of Zelda: Breath of the Wild",
+        "imageKey": "botw"
+    },
+    {
+        "id": "mk8d",
+        "name": "Mario Kart 8 Deluxe",
+        "imageKey": "mk8d"
+    },
+    {
+        "id": "ff7",
+        "name": "Final Fantasy 7",
+        "imageKey": "ff7"
+    },
+    {
+        "id": "fortnite",
+        "name": "Fortnite",
+        "imageKey": "fortnite"
+    }
+]
