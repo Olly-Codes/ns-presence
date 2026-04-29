@@ -2,12 +2,35 @@
   "name": "ns-presence",
   "private": true,
   "version": "0.0.0",
+  "description": "Nintendo Switch Discord Rich Presence",
+  "author": "Olly Codes",
   "main": "dist-electron/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npx electron-builder",
     "lint": "eslint .",
     "preview": "vite preview"
+  },
+  "build": {
+    "appId": "com.ollycodes.ns-presence",
+    "productName": "NS Presence",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "data/**/*",
+      "assets/**/*"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
   },
   "dependencies": {
     "discord-rpc": "^4.0.1",
