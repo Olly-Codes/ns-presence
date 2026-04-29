@@ -39,6 +39,16 @@ function App() {
     }
   }
 
+  async function handleIdle() {
+    const result = await window.ns-presence.setIdle()
+    if (result.success) {
+      setRpcStatus("away");
+      setInfo("Showing home menu on idle status.");
+    } else {
+      setInfo(`Error: ${result.error}`);
+    }
+  }
+
   return (
     <div>
       <h1>NS-Presence</h1>
