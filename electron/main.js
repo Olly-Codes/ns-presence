@@ -86,3 +86,21 @@ ipcMain.handle("set-activity", async (event, {game, statusMessage }) => {
         return { success: false, error: err.message }
     }
 });
+
+ipcMain.handle("set-idle", async () => {
+    if (!rpcReady || !rpc) {
+        return { success: false, error: "RPC is not connected"}
+    }
+
+    try {
+        await rpc.setActivity({
+            details: "Home",
+            largeImageKey: "switch-home",
+            largeImageText: "Nintendo Switch",
+            instance: false,
+        });
+        return { success: true }
+    } catch (err) {
+        return { success: false, error: err.message }
+    }
+});
