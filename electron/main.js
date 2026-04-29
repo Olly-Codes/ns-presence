@@ -1,6 +1,10 @@
 const {app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const RPC = require("discord-rpc");
+const Store = require("electron-store");
+const gamesData = require("../data/games.json");
+
+const store = new Store();
 
 let rpc = null;
 let rpcReady = false;
@@ -25,7 +29,12 @@ function createWindow() {
     const window = new BrowserWindow({
         width: 400,
         height: 600,
-        resizable: false
+        resizable: false,
+        webPreferences: {
+            preload: path.join(__dirname, "preload.js"),
+            contextIsolation: true, // keeps Node out of renderer
+            nodeIntegration: false // renderer cannot require() Node modules
+        }
     });
 
     // Ensure we serve built file in production otherwise serve on localhost
@@ -46,4 +55,8 @@ app.on("window-all-closed", () => {
         rpc.destroy();
     }
     app.quit();
-})
+});
+
+ipcMain.handle("get-all-games", () => {
+    return gamesData;
+});
