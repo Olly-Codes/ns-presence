@@ -35,6 +35,7 @@ function createWindow() {
         width: 400,
         height: 600,
         resizable: false,
+        autoHideMenuBar: true,
         webPreferences: {
             preload: path.join(__dirname, "preload.js"),
             contextIsolation: true, // keeps Node out of renderer
