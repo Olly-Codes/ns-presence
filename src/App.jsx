@@ -59,8 +59,6 @@ function App() {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', height: '100vh' }}>
-
-      {/* Header */}
       <div style={{
         background: 'var(--red)',
         padding: '1.25rem 1.5rem',
@@ -72,12 +70,6 @@ function App() {
         boxShadow: '0 4px 20px rgba(0,0,0,0.4)',
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          {/* Switch logo mark */}
-          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-            <rect x="2" y="6" width="10" height="16" rx="5" fill="white" opacity="0.9"/>
-            <rect x="16" y="6" width="10" height="16" rx="5" fill="white" opacity="0.9"/>
-            <rect x="10" y="9" width="8" height="10" fill="white" opacity="0.9"/>
-          </svg>
           <span style={{
             fontSize: '1.4rem',
             fontWeight: 900,

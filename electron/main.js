@@ -7,7 +7,7 @@ const { error } = require("console");
 let rpc = null;
 let rpcReady = false;
 
-const CLIENT_ID = 1498840327274893425;
+const CLIENT_ID = "1498840327274893425";
 
 async function connectRPC() {
     rpc = new RPC.Client({ transport: "ipc"});
