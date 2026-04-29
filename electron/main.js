@@ -3,6 +3,7 @@ const path = require("path");
 const RPC = require("discord-rpc");
 const Store = require("electron-store");
 const gamesData = require("../data/games.json");
+const { error } = require("console");
 
 const store = new Store();
 
@@ -99,6 +100,19 @@ ipcMain.handle("set-idle", async () => {
             largeImageText: "Nintendo Switch",
             instance: false,
         });
+        return { success: true }
+    } catch (err) {
+        return { success: false, error: err.message }
+    }
+});
+
+ipcMain.handle("clear-activity", async () => {
+    if (!rpcReady || !rpc) {
+        return { success: false, error: "RPC is not connected"}
+    }
+
+    try {
+        await rpc.clearActivity();
         return { success: true }
     } catch (err) {
         return { success: false, error: err.message }
