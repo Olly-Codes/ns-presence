@@ -2,6 +2,8 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
 import gameData from "../games.json";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 function App() {
   const [game, setGame] = useState("Animal Crossing: New Horizons");
@@ -32,7 +34,9 @@ function App() {
 
   return (
     <main className="container">
-      <div className="game-list-wrapper">
+      <Header />
+      <section className="body-content">
+        <div className="game-list-wrapper">
         <select 
           value={game} 
           onChange={(e) => setGame(e.target.value)}
@@ -43,11 +47,13 @@ function App() {
               </option>
             ))};
           </select>
-      </div>
-      <div className="btn-wrapper">
-        <button onClick={(e) => handleSetGamePresence(game, gameData)}>Play</button>
-        <button onClick={handleClearGamePresence}>Clear</button>
-      </div>
+        </div>
+        <div className="btn-wrapper">
+          <button onClick={(e) => handleSetGamePresence(game, gameData)}>Play</button>
+          <button onClick={handleClearGamePresence}>Clear</button>
+        </div>
+      </section>
+      <Footer gameCount={gameData.length}/>
     </main>
   );
 }
