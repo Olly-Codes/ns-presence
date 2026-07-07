@@ -1,3 +1,4 @@
+import { HiPaintBrush } from "react-icons/hi2"
 import DigitalClock from "./DigitalClock";
 
 const Header = () => {
@@ -8,7 +9,9 @@ const Header = () => {
                 <p>Discord Rich Presence</p>
             </div>
             <div className="header-extra">
-                <span className="themes-icon"></span>
+                <span className="themes-icon">
+                    <HiPaintBrush />
+                </span>
                 <DigitalClock />
             </div>
         </header>
