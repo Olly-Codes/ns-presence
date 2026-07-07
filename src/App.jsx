@@ -1,19 +1,24 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/core";
+import gameData from "../games.json";
 
 function App() {
-  const handleSetGamePresence = async () => {
+  const [game, setGame] = useState("Animal Crossing: New Horizons");
+  const base_url = "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/covers/";
+
+  const handleSetGamePresence = async (gameName, gameData) => {
+
+    const currentGame = gameData.filter((data) => data.name === gameName);
 
     try {
       await invoke("set_game_presence", {
-        gameTitle: "Mario Kart 8: Deluxe Edition",
-        largeImage: "https://images.igdb.com/igdb/image/upload/t_cover_big/co213q.webp",
-        smallImage: "https://images.igdb.com/igdb/image/upload/t_cover_big/co4qsz.webp"
+        gameTitle: `${currentGame[0].name}`,
+        largeImage: `${base_url}${currentGame[0].img}.jpg`,
+        smallImage: "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/covers/nintendo-switch.png"
       });
-      console.log("Presence set!");
     } catch (err) {
-      console.log(`Failed to set presence: ${err}`);
+      console.log(err);
     }
   }
 
@@ -21,16 +26,29 @@ function App() {
     
     try {
       await invoke("clear_game_presence");
-      console.log("Presence cleared!");
     } catch (err) {
-      console.log(`Failed to clear presence: ${err}`);
+      console.log(err);
     }
   }
 
   return (
     <main className="container">
-      <button onClick={handleSetGamePresence}>Play</button>
-      <button onClick={handleClearGamePresence}>Clear</button>
+      <div className="game-list-wrapper">
+        <select 
+          value={game} 
+          onChange={(e) => setGame(e.target.value)}
+          >
+            {gameData.map(game => (
+              <option key={game.name} value={game.value}>
+                {game.name}
+              </option>
+            ))};
+          </select>
+      </div>
+      <div className="btn-wrapper">
+        <button onClick={(e) => handleSetGamePresence(game, gameData)}>Play</button>
+        <button onClick={handleClearGamePresence}>Clear</button>
+      </div>
     </main>
   );
 }
