@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Animal Crossing: New Horizons",
+        "img": "acnh"
+    },
+    {
+        "name": "Balatro",
+        "img": "balatro"
+    },
+    {
+        "name": "Celeste",
+        "img": "celeste"
+    },
+    {
+        "name": "Hollow Knight",
+        "img": "hk"
+    },
+    {
+        "name": "The Legend of Zelda: Breath of the Wild",
+        "img": "botw"
+    },
+    {
+        "name": "Mario Kart 8 Deluxe",
+        "img": "mk8"
+    },
+    {
+        "name": "Unicorn Overlord",
+        "img": "uo"
+    },
+    {
+        "name": "Stardew Valley",
+        "img": "sv"
+    }
+]
