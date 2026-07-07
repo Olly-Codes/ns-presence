@@ -1,8 +1,16 @@
+import DigitalClock from "./DigitalClock";
+
 const Header = () => {
     return (
         <header className="header-content">
-            <h1>NS Presence</h1>
-            <p>Discord Rich Presence</p>
+            <div className="header-text">
+                <h1>NS Presence</h1>
+                <p>Discord Rich Presence</p>
+            </div>
+            <div className="header-extra">
+                <span className="themes-icon"></span>
+                <DigitalClock />
+            </div>
         </header>
     );
 };
