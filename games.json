@@ -20,6 +20,10 @@
         "img": "botw"
     },
     {
+        "name": "The Legend of Zelda: Tears of the Kingdom",
+        "img": "totk"
+    },
+    {
         "name": "Mario Kart 8 Deluxe",
         "img": "mk8"
     },
@@ -30,5 +34,81 @@
     {
         "name": "Stardew Valley",
         "img": "sv"
+    },
+    {
+        "name": "Hogwarts Legacy",
+        "img": "hl"
+    },
+    {
+        "name": "Final Fantasy VII",
+        "img": "ff7"
+    },
+    {
+        "name": "Momodora: Moonlit Farewell",
+        "img": "mmf"
+    },
+    {
+        "name": "Ys Origin",
+        "img": "yso"
+    },
+    {
+        "name": "Fortnite",
+        "img": "fn"
+    },
+    {
+        "name": "Luigi's Mansion 3",
+        "img": "lm3"
+    },
+    {
+        "name": "Super Mario Odyssey",
+        "img": "smo"
+    },
+    {
+        "name": "Super Mario 3D World + Bowser's Fury",
+        "img": "sm3dwbf"
+    },
+    {
+        "name": "Super Smash Bros. Ultimate",
+        "img": "ssbu"
+    },
+    {
+        "name": "Kirby and the Forgotten Land",
+        "img": "ktfl"
+    },
+    {
+        "name": "Donkey Kong Country: Tropical Freeze",
+        "img": "tf"
+    },
+    {
+        "name": "Metroid Dread",
+        "img": "md"
+    },
+    {
+        "name": "Super Mario Bros. Wonder",
+        "img": "smbw"
+    },
+    {
+        "name": "Hades",
+        "img": "h"
+    },
+    {
+        "name": "Xenoblade Chronicles: Definitive Edition",
+        "img": "xbcde"
+    },
+    {
+        "name": "Pokemon Legends: Arceus",
+        "img": "pla"
+    },
+    {
+        "name": "Fire Emblem: Three Houses",
+        "img": "feth"
+    },
+    {
+        "name": "Xenoblade Chronicles 2",
+        "img": "xbc2"
+    },
+    {
+        "name": "Astral Chain",
+        "img": "ac"
     }
 ]
