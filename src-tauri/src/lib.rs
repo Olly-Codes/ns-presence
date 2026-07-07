@@ -8,8 +8,7 @@ struct DiscordState(Mutex<Option<DiscordIpcClient>>);
 fn set_game_presence (
     state: tauri::State<DiscordState>,
     game_title: String, 
-    large_image: String, 
-    small_image: String
+    large_image: String,
 ) -> Result<(), String> {
     let mut guard = state.0.lock().unwrap();
 
@@ -30,7 +29,6 @@ fn set_game_presence (
     let assets = activity::Assets::new()
         .large_image(&large_image)
         .large_text(&game_title)
-        .small_image(&small_image)
         .small_text("Nintendo Switch");
 
     client.set_activity(activity::Activity::new()

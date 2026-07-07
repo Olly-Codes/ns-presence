@@ -15,7 +15,6 @@ function App() {
       await invoke("set_game_presence", {
         gameTitle: `${currentGame[0].name}`,
         largeImage: `${base_url}${currentGame[0].img}.jpg`,
-        smallImage: "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/covers/nintendo-switch.png"
       });
     } catch (err) {
       console.log(err);
