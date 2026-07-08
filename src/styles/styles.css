@@ -115,9 +115,17 @@
     border: 1px solid var(--accent);
 }
 
+.btn-wrapper button:nth-child(1):hover {
+    background-color: var(--accent-hover);
+}
+
 .btn-wrapper button:nth-child(2) {
     background-color: var(--bg-btn);
     border: 1px solid var(--bg-btn);
+}
+
+.btn-wrapper button:nth-child(2):hover {
+    background-color: var(--text-secondary);
 }
 
 /* ----- FOOTER */
