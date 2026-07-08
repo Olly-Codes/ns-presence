@@ -7,8 +7,9 @@ import Footer from "./components/Footer";
 import "./styles/styles.css";
 
 function App() {
-  const [game, setGame] = useState("Animal Crossing: New Horizons");
-  const base_url = "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/covers/";
+  const [game, setGame] = useState(gameData[0].name);
+  const [currentImg, setCurrentImg] = useState(gameData[0].local_img);
+  const base_url = "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/public/covers";
 
   const handleSetGamePresence = async (gameName, gameData) => {
 
@@ -19,6 +20,7 @@ function App() {
         gameTitle: `${currentGame[0].name}`,
         largeImage: `${base_url}${currentGame[0].img}.jpg`,
       });
+      setCurrentImg(currentGame[0].local_img);
     } catch (err) {
       console.log(err);
     }
@@ -37,6 +39,9 @@ function App() {
     <main className="container">
       <Header />
       <section className="body-content">
+        <div className="img-wrapper">
+          <img src={currentImg} />
+        </div>
         <div className="game-list-wrapper">
         <select 
           value={game} 
