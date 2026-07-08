@@ -14,7 +14,8 @@
       {
         "title": "ns-presence",
         "width": 400,
-        "height": 600
+        "height": 600,
+        "resizable": false
       }
     ],
     "security": {
