@@ -4,6 +4,7 @@ import { invoke } from "@tauri-apps/api/core";
 import gameData from "../games.json";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./styles/styles.css";
 
 function App() {
   const [game, setGame] = useState("Animal Crossing: New Horizons");
