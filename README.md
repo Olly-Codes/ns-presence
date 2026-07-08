@@ -12,6 +12,12 @@ I've wanted to build a Switch Discord Presence tool from scratch properly for a 
 - 28 games included so far but will be updated along the way
 - Game data is local and fully editable, with minimal coding required (where images are fetched from if new ones are added)
 
+## Installation
+1. Download installer from the [Releases page](https://github.com/Olly-Codes/ns-presence/releases/tag/v0.1.0)
+2. Run the `.msi` or `.exe` installer
+3. Windows may show a SmartScreen warning, this is due to it not being code-signed you can click more info -> run anyway. But then again you can decide after checking out the code yourself
+4. Launch NS Presence, make sure Discord is running before hitting play
+
 ## Adding your own games
 Game data is all located in `games.json` as `{ "name": ..., "img": ..., "local_img": ... }` entries, with cover art placed in `public/covers` folder. To add a game that isn't included:
 1. If you do decide to fork this repo, please make sure you update the `base_url` so all images point to your own repo and any updated images that you add.
