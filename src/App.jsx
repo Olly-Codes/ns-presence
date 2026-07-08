@@ -9,6 +9,7 @@ import "./styles/styles.css";
 function App() {
   const [game, setGame] = useState(gameData[0].name);
   const [currentImg, setCurrentImg] = useState(gameData[0].local_img);
+  const [isConnected, setIsConnected] = useState(false);
   const base_url = "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/public/covers";
 
   const handleSetGamePresence = async (gameName, gameData) => {
@@ -20,6 +21,7 @@ function App() {
         gameTitle: `${currentGame[0].name}`,
         largeImage: `${base_url}${currentGame[0].img}.jpg`,
       });
+      setIsConnected(true)
       setCurrentImg(currentGame[0].local_img);
     } catch (err) {
       console.log(err);
@@ -30,6 +32,7 @@ function App() {
     
     try {
       await invoke("clear_game_presence");
+      setIsConnected(false);
     } catch (err) {
       console.log(err);
     }
@@ -59,7 +62,10 @@ function App() {
           <button onClick={handleClearGamePresence}>Clear</button>
         </div>
       </section>
-      <Footer gameCount={gameData.length}/>
+      <Footer 
+        gameCount={gameData.length}
+        isConnected={isConnected}
+      />
     </main>
   );
 }
