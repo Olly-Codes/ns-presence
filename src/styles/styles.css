@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --bg: #1a1a1a;
+    --bg-surface: #232328;
+    --bg-btn: #8c8c8c;
+    --border: #33333a;
+
+    --text-primary: #f2f2f0;
+    --text-secondary: #9a9aa2;
+
+    --accent: #e60012;
+    --accent-hover: #ff2d3a;
+
+    --status-connected: #4ade80;
+    --status-offline: #6b6b70;
+}
+
+/* ----- APP CONTAINER */
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 0px 20px;
+    background-color: var(--bg);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* ----- HEADER */
+.header-content {
+    width: 100%;
+    height: 80px;
+    color: var(--text-primary);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-extra {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.themes-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--bg-btn);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.themes-icon:hover {
+    background-color: var(--status-offline);
+}
+
+/* ----- BODY */
+
+/* ----- FOOTER */

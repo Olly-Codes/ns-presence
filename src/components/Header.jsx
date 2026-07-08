@@ -5,14 +5,14 @@ const Header = () => {
     return (
         <header className="header-content">
             <div className="header-text">
-                <h1>NS Presence</h1>
+                <h2>NS Presence</h2>
                 <p>Discord Rich Presence</p>
             </div>
             <div className="header-extra">
+                <DigitalClock />
                 <span className="themes-icon">
                     <HiPaintBrush />
                 </span>
-                <DigitalClock />
             </div>
         </header>
     );
