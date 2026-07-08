@@ -69,5 +69,55 @@
 }
 
 /* ----- BODY */
+.body-content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-content .img-wrapper {
+    width: 200px;
+    height: 200px;
+    margin: 40px 0px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.game-list-wrapper select {
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+    background-color: var(--bg-surface);
+}
+
+.btn-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-wrapper button {
+    padding: 12px 20px;
+    border-radius: 5px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.btn-wrapper button:nth-child(1) {
+    background-color: var(--accent);
+    border: 1px solid var(--accent);
+}
+
+.btn-wrapper button:nth-child(2) {
+    background-color: var(--bg-btn);
+    border: 1px solid var(--bg-btn);
+}
 
 /* ----- FOOTER */
