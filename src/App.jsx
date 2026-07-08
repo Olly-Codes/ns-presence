@@ -10,7 +10,7 @@ function App() {
   const [game, setGame] = useState(gameData[0].name);
   const [currentImg, setCurrentImg] = useState(gameData[0].local_img);
   const [isConnected, setIsConnected] = useState(false);
-  const base_url = "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/public/covers";
+  const base_url = "https://cdn.jsdelivr.net/gh/Olly-Codes/ns-presence@main/public/covers/";
 
   const handleSetGamePresence = async (gameName, gameData) => {
 
