@@ -1,114 +1,142 @@
 [
     {
         "name": "Animal Crossing: New Horizons",
-        "img": "acnh"
+        "img": "acnh",
+        "local_img": "/covers/acnh.jpg"
     },
     {
         "name": "Balatro",
-        "img": "balatro"
+        "img": "balatro",
+        "local_img": "/covers/balatro.jpg"
     },
     {
         "name": "Celeste",
-        "img": "celeste"
+        "img": "celeste",
+        "local_img": "/covers/celeste.jpg"
     },
     {
         "name": "Hollow Knight",
-        "img": "hk"
+        "img": "hk",
+        "local_img": "/covers/hk.jpg"
     },
     {
         "name": "The Legend of Zelda: Breath of the Wild",
-        "img": "botw"
+        "img": "botw",
+        "local_img": "/covers/botw.jpg"
     },
     {
         "name": "The Legend of Zelda: Tears of the Kingdom",
-        "img": "totk"
+        "img": "totk",
+        "local_img": "/covers/totk.jpg"
     },
     {
         "name": "Mario Kart 8 Deluxe",
-        "img": "mk8"
+        "img": "mk8",
+        "local_img": "/covers/mk8.jpg"
     },
     {
         "name": "Unicorn Overlord",
-        "img": "uo"
+        "img": "uo",
+        "local_img": "/covers/uo.jpg"
     },
     {
         "name": "Stardew Valley",
-        "img": "sv"
+        "img": "sv",
+        "local_img": "/covers/sv.jpg"
     },
     {
         "name": "Hogwarts Legacy",
-        "img": "hl"
+        "img": "hl",
+        "local_img": "/covers/hl.jpg"
     },
     {
         "name": "Final Fantasy VII",
-        "img": "ff7"
+        "img": "ff7",
+        "local_img": "/covers/ff7.jpg"
     },
     {
         "name": "Momodora: Moonlit Farewell",
-        "img": "mmf"
+        "img": "mmf",
+        "local_img": "/covers/mmf.jpg"
     },
     {
         "name": "Ys Origin",
-        "img": "yso"
+        "img": "yso",
+        "local_img": "/covers/yso.jpg"
     },
     {
         "name": "Fortnite",
-        "img": "fn"
+        "img": "fn",
+        "local_img": "/covers/fn.jpg"
     },
     {
         "name": "Luigi's Mansion 3",
-        "img": "lm3"
+        "img": "lm3",
+        "local_img": "/covers/lm3.jpg"
     },
     {
         "name": "Super Mario Odyssey",
-        "img": "smo"
+        "img": "smo",
+        "local_img": "/covers/smo.jpg"
     },
     {
         "name": "Super Mario 3D World + Bowser's Fury",
-        "img": "sm3dwbf"
+        "img": "sm3dwbf",
+        "local_img": "/covers/sm3dwbf.jpg"
     },
     {
         "name": "Super Smash Bros. Ultimate",
-        "img": "ssbu"
+        "img": "ssbu",
+        "local_img": "/covers/ssbu.jpg"
     },
     {
         "name": "Kirby and the Forgotten Land",
-        "img": "ktfl"
+        "img": "ktfl",
+        "local_img": "/covers/ktfl.jpg"
     },
     {
         "name": "Donkey Kong Country: Tropical Freeze",
-        "img": "tf"
+        "img": "tf",
+        "local_img": "/covers/tf.jpg"
     },
     {
         "name": "Metroid Dread",
-        "img": "md"
+        "img": "md",
+        "local_img": "/covers/md.jpg"
     },
     {
         "name": "Super Mario Bros. Wonder",
-        "img": "smbw"
+        "img": "smbw",
+        "local_img": "/covers/smbw.jpg"
     },
     {
         "name": "Hades",
-        "img": "h"
+        "img": "h",
+        "local_img": "/covers/h.jpg"
     },
     {
         "name": "Xenoblade Chronicles: Definitive Edition",
-        "img": "xbcde"
+        "img": "xbcde",
+        "local_img": "/covers/xbcde.jpg"
     },
     {
         "name": "Pokemon Legends: Arceus",
-        "img": "pla"
+        "img": "pla",
+        "local_img": "/covers/pla.jpg"
     },
     {
         "name": "Fire Emblem: Three Houses",
-        "img": "feth"
+        "img": "feth",
+        "local_img": "/covers/feth.jpg"
     },
     {
         "name": "Xenoblade Chronicles 2",
-        "img": "xbc2"
+        "img": "xbc2",
+        "local_img": "/covers/xbc2.jpg"
     },
     {
         "name": "Astral Chain",
-        "img": "ac"
+        "img": "ac",
+        "local_img": "/covers/ac.jpg"
     }
 ]
