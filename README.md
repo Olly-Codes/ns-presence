@@ -1,8 +1,11 @@
 # NS Presence
 A Discord Rich Presence app for Nintendo Switch, it shows what you're currently playing. All game data is stored locally with the images being fetched from repo.
 
-## Screenshot
-<img width="502" height="789" alt="ns-presence" src="https://github.com/user-attachments/assets/0013be9d-c2dc-4b08-b309-626ee2259838" />
+## Application
+<img width="490" height="777" alt="ns-presence" src="https://github.com/user-attachments/assets/83194a83-69db-4466-bda3-749da3717736" />
+
+## Discord Status
+<img width="608" height="354" alt="ns-presence-status" src="https://github.com/user-attachments/assets/c725b97c-ae74-4fc0-b4c7-4fe029e147d3" />
 
 ## Why this exists
 I've wanted to build a Switch Discord Presence tool from scratch properly for a long time and this was also a way for me to learn Tauri + Rust coming from a JavaScript background. This project was originally inspired by [hobby-grade/Nintendo-Switch-Discord-Status](https://github.com/hobby-grade/Nintendo-Switch-Discord-Status), which hadn't seen updates for a while and was built in Electron + Svelte instead. So I ended up rebuilding the idea in a stack I was more interested in (yes, this is due to stuff like binary sizes etc.)
